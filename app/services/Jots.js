@@ -13,12 +13,11 @@ export class Jots {
 
   getJotTemplate() {
     return `
-      < div class="p-3 border border-1 border-dark m-1 rounded" >
-      <h3>HTML Tricks</h3>
-      <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        <p>2. Voluptate non, porro suscipit aut temporibus</p>
-        <p>3. vitae ipsam nam incidunt iste error ex recusandae.</p>
-    </div>`
-
+        <div class="p-3 border border-1 border-dark m-1 rounded">
+          <h3>HTML Tricks</h3>
+          <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <p>2. Voluptate non, porro suscipit aut temporibus</p>
+          <p>3. vitae ipsam nam incidunt iste error ex recusandae.</p>
+          </div>`
   }
 }
