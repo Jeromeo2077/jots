@@ -19,6 +19,7 @@ class ObservableAppState extends EventEmitter {
     }),
   ]
 
+  /**@type {Jot}*/
   activeJot = null
 
 }
