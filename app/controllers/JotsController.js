@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { jotsService } from "../services/JotsService.js";
 
 export class JotsController {
   constructor() {
@@ -20,8 +21,8 @@ export class JotsController {
   }
 
   setActiveJot(jotId) {
-    console.log("The following Jot ID has been set to active: ", jotId);
-
+    console.log("The following Jot ID has been sent by the JotsController: ", jotId);
+    jotsService.setActiveJot(jotId)
 
   }
 

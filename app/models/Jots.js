@@ -18,4 +18,5 @@ export class Jots {
           <p>${this.body}</p>
           </div>`
   }
+
 }
