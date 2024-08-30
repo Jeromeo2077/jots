@@ -1,4 +1,4 @@
-export class {
+export class Jots {
   constructor(data) {
     this.title = data.title
     this.color = data.color
