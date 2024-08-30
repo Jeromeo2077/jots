@@ -13,7 +13,7 @@ export class Jots {
 
   getJotTemplate() {
     return `
-        <div onclick="app.JotsController.setActiveJot('${this.id}')" class="p-3 border border-1 border-dark mt-1 mb-1 rounded shadow-sm" role="button">
+        <div onclick="app.JotsController.setActiveJot('${this.id}')" class="p-3 border border-2 border-dark mt-1 mb-1 rounded shadow-sm" role="button">
           <h3>${this.title}</h3>
           <p>${this.body}</p>
           </div>`
@@ -22,7 +22,7 @@ export class Jots {
 
   getDetailedJotTemplate() {
     return `
-    <div class="p-3 border border-1 border-dark m-1 rounded">
+    <divclass="p-3 border border-1 border-dark m-1 rounded">
        <h3>${this.title}</h3>
        <p>Created: ${this.created.toLocaleString()}</p>
        <p>Updated: ${this.updated.toLocaleString()}</p>
