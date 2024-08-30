@@ -15,7 +15,13 @@ export class JotsController {
     jots.forEach(jot => jotsHTML += jot.getJotTemplate())
 
     const jotElm = document.getElementById('jotslist')
+    // @ts-ignore
     jotElm.innerHTML = jotsHTML
+  }
+
+  setActiveJot(jotId) {
+    console.log("The following Jot ID has been set to active: ", jotId);
+
   }
 
 }
