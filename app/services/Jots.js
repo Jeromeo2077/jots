@@ -1,3 +1,5 @@
+import { generateId } from "../utils/GenerateId.js"
+
 export class Jots {
   constructor(data) {
     this.title = data.title
