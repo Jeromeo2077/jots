@@ -23,10 +23,12 @@ export class Jots {
   getDetailedJotTemplate() {
     return `
     <div class="p-3 border border-1 border-dark m-1 rounded">
-    <h3>${this.title}</h3>
-    <p>Created: ${this.created}</p>
-    <p>Updated: + ${this.updated}</p>
-    <p>${this.body}</p>
-  </div>`
+       <h3>${this.title}</h3>
+       <p>Created: ${this.created.toLocaleString()}</p>
+       <p>Updated: ${this.updated.toLocaleString()}</p>
+     <div class="form-floating">
+       <textarea class="form-control" id="updatedbody" style="height: 50vh">${this.body}</textarea>
+     </div>
+    </div > `
   }
 }
