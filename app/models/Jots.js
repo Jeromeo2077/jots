@@ -24,7 +24,9 @@ export class Jots {
     return `
     <div class="p-3 border border-1 border-dark m-1 rounded">
     <h3>${this.title}</h3>
-       <p>${this.body}</p>
+    <p>Created: ${this.created}</p>
+    <p>Updated: + ${this.updated}</p>
+    <p>${this.body}</p>
   </div>`
   }
 }
