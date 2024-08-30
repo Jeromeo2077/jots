@@ -22,6 +22,7 @@ export class JotsController {
   setActiveJot(jotId) {
     console.log("The following Jot ID has been set to active: ", jotId);
 
+
   }
 
 }
