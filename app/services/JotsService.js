@@ -5,9 +5,12 @@ import { saveState } from "../utils/Store.js";
 class JotsService {
 
   createJot(rawJotData) {
+    console.log('Jot Form Data received by JotsService', rawJotData);
     const jots = AppState.jots
     const newJot = new Jots(rawJotData)
     jots.push(newJot)
+    console.log('Jot Form Data sent to Jots Array', newJot);
+
 
     this.saveJots()
   }

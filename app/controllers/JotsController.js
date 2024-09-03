@@ -7,6 +7,7 @@ export class JotsController {
     console.log('The JotsController has loaded');
     AppState.on('jots', this.drawJots)
     AppState.on('activeJot', this.drawActiveJots)
+    AppState.on('numberJots', this.drawNumberJots)
 
     this.drawJots()
     this.drawNumberJots()
@@ -63,7 +64,7 @@ export class JotsController {
     // @ts-ignore
     const jotForm = event.target
     const jotFormData = getFormData(jotForm)
-    console.log('Jot Form Data', jotFormData);
+    console.log('Jot Form Data sent by JotsController', jotFormData);
     jotsService.createJot(jotFormData)
   }
 
