@@ -9,6 +9,7 @@ export class JotsController {
     AppState.on('activeJot', this.drawActiveJots)
 
     this.drawJots()
+    this.drawNumberJots()
   }
 
 
@@ -35,6 +36,17 @@ export class JotsController {
     const jotElm = document.getElementById('jotsdetail')
     // @ts-ignore
     jotElm.innerHTML = jotsHTML
+  }
+
+
+  drawNumberJots() {
+    const jot = AppState.numberJots
+
+    let jotNumberHTML = jot
+
+    const jotNumberElm = document.getElementById('jotsnumber')
+    // @ts-ignore
+    jotNumberElm.innerText = jotNumberHTML
   }
 
 

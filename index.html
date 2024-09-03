@@ -35,22 +35,18 @@
   <main class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <form>
-          <div class="mb-3">
-            <span>apps.AppState.numberJots, Jots</span>
-            <input class="form-control" type="text" id="jotTitle" name="jotTitle" value="Enter Jot Title..." required
-              min="3" max="15">
+        <div class="mb-2 d-flex">
+          <div>Number of Current Jots: <span id="jotsnumber"></span></div>
+        </div>
+        <input class="form-control" type="text" id="jotTitle" name="jotTitle" value="Enter Jot Title..." required
+          min="3" max="15">
+        <form class="border border-success border-2 rounded mt-2">
+          <div class="d-flex align-items-center m-2">
+            <label for="favcolor">Select Jot Color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
           </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <select class="form-select-sm">
-              <option selected>Choose a color</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <div class="mb-3">
-              <button type="submit" class="btn btn-success btn-sm rounded">Create Jot</button>
-            </div>
+          <div class="m-2">
+            <button type="submit" class="btn btn-success btn-sm rounded position-relative">Create Jot</button>
           </div>
         </form>
 
