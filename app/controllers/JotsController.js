@@ -1,6 +1,6 @@
 import { AppState } from "../AppState.js";
-import { Jots } from "../models/Jots.js";
 import { jotsService } from "../services/JotsService.js";
+import { getFormData } from "../utils/FormHandler.js";
 
 export class JotsController {
   constructor() {
@@ -53,6 +53,16 @@ export class JotsController {
   setActiveJot(jotId) {
     console.log("The following Jot ID has been sent by the JotsController: ", jotId);
     jotsService.setActiveJot(jotId)
+  }
+
+
+  createJot() {
+    // @ts-ignore
+    event.preventDefault()
+    // @ts-ignore
+    const jotForm = event.target
+    const jotFormData = getFormData(jotForm)
+    jotsService.createJot(jotFormData)
   }
 
 }

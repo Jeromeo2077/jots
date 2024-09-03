@@ -1,6 +1,14 @@
 import { AppState } from "../AppState.js";
+import { Jots } from "../models/Jots.js";
 
 class JotsService {
+
+  createJot(rawJotData) {
+    const jots = AppState.jots
+    const newJot = new Jots(rawJotData)
+    jots.push(newJot)
+
+  }
 
   setActiveJot(jotId) {
     console.log("The following Jot ID has been received by the JotsService: ", jotId);
