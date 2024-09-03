@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js";
 import { Jots } from "../models/Jots.js";
+import { saveState } from "../utils/Store.js";
 
 class JotsService {
 
@@ -8,6 +9,12 @@ class JotsService {
     const newJot = new Jots(rawJotData)
     jots.push(newJot)
 
+    this.saveJots()
+  }
+
+
+  saveJots() {
+    saveState('jots', AppState.jots)
   }
 
   setActiveJot(jotId) {

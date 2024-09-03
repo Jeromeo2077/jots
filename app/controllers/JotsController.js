@@ -59,9 +59,11 @@ export class JotsController {
   createJot() {
     // @ts-ignore
     event.preventDefault()
+    console.log('Jot Form Submitted');
     // @ts-ignore
     const jotForm = event.target
     const jotFormData = getFormData(jotForm)
+    console.log('Jot Form Data', jotFormData);
     jotsService.createJot(jotFormData)
   }
 
