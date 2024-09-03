@@ -33,6 +33,9 @@ class JotsService {
 
   }
 
+  // TODO add a save Jot method
+  // Update the jot body and the updaated properties
+
 }
 
 export const jotsService = new JotsService

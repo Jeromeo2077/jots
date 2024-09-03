@@ -7,7 +7,7 @@ export class JotsController {
     console.log('The JotsController has loaded');
     AppState.on('jots', this.drawJots)
     AppState.on('activeJot', this.drawActiveJots)
-    AppState.on('numberJots', this.drawNumberJots)
+    AppState.on('jots', this.drawNumberJots)
 
     this.drawJots()
     this.drawNumberJots()
