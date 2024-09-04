@@ -4,6 +4,16 @@ import { loadState, saveState } from "../utils/Store.js";
 
 class JotsService {
 
+  deleteJot(jotId) {
+    const jots = AppState.jots
+
+    const jotIndex = jots.findIndex(jot => jot.id == jotId)
+
+    jots.splice(jotIndex, 1)
+
+    this.saveJots()
+  }
+
   createJot(rawJotData) {
     console.log('Jot Form Data received by JotsService', rawJotData);
     const jots = AppState.jots
