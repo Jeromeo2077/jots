@@ -1,6 +1,6 @@
 import { AppState } from "../AppState.js";
 import { Jots } from "../models/Jots.js";
-import { saveState } from "../utils/Store.js";
+import { loadState, saveState } from "../utils/Store.js";
 
 class JotsService {
 
@@ -11,8 +11,13 @@ class JotsService {
     jots.push(newJot)
     console.log('Jot Form Data sent to Jots Array', newJot);
 
-
     this.saveJots()
+  }
+
+
+  loadJots() {
+    const jotsFromLocalStorage = loadState('jots', [Jots])
+    AppState.jots = jotsFromLocalStorage
   }
 
 

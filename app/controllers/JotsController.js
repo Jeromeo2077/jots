@@ -11,6 +11,7 @@ export class JotsController {
 
     this.drawJots()
     this.drawNumberJots()
+    jotsService.loadJots()
   }
 
 

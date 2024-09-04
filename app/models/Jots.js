@@ -26,6 +26,7 @@ export class Jots {
        <h3 style="color: ${this.color}" >${this.title}</h3>
        <p>Created: ${this.created.toLocaleString()}</p>
        <p>Updated: ${this.updated.toLocaleString()}</p>
+      <div><i onclick="apps.JotsController.deleteJot('${this.id}')" class="mdi mdi-delete-forever text-danger" title="Delete ${this.title}" role="button"></i></div>
      <div class="form-floating">
       <!--FIXME add an onblur for saving the jot -->
        <textarea class="form-control" id="updatedbody" style="height: 50vh">${this.body}</textarea>
