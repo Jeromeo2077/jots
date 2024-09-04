@@ -70,7 +70,6 @@ export class JotsController {
   }
 
   deleteJot(jotId) {
-    debugger
     const confirmToDelete = window.confirm("Are you sure that you want to delete this Jot?")
 
     if (!confirmToDelete) return
